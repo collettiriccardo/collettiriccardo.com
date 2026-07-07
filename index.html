@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Riccardo Colletti · Engineer · UC Berkeley MEng EECS</title>
+  <meta name="description" content="Riccardo Colletti · Engineer · MEng EECS, UC Berkeley. Working on AI, machine learning, and deep reinforcement learning." />
+  <meta name="author" content="Riccardo Colletti" />
+  <meta name="theme-color" content="#05060a" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Riccardo Colletti" />
+  <meta property="og:title" content="Riccardo Colletti · Engineer · UC Berkeley MEng EECS" />
+  <meta property="og:description" content="Engineer · MEng EECS, UC Berkeley. Working on AI, machine learning, and deep reinforcement learning." />
+  <meta property="og:url" content="https://collettiriccardo.com" />
+  <meta property="og:image" content="https://collettiriccardo.com/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Riccardo Colletti · Engineer · UC Berkeley MEng EECS" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Riccardo Colletti · Engineer · UC Berkeley MEng EECS" />
+  <meta name="twitter:description" content="Engineer · MEng EECS, UC Berkeley. Working on AI, machine learning, and deep reinforcement learning." />
+  <meta name="twitter:image" content="https://collettiriccardo.com/assets/og.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__brand">colletti.r<span class="caret">_</span></a>
+    <nav class="nav__links">
+      <a href="#about"><span class="nav__num">01</span> about</a>
+      <a href="#work"><span class="nav__num">02</span> research</a>
+      <a href="#snapshots"><span class="nav__num">03</span> snapshots</a>
+      <a href="#cv"><span class="nav__num">04</span> cv</a>
+      <a href="mailto:riccardo_colletti@berkeley.edu" class="nav__cta">contact ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__left">
+
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="terminal__title">riccardo@berkeley:~/portfolio</span>
+          </div>
+          <pre class="terminal__body"><code><span class="t-prompt">$</span> <span class="t-cmd">whoami</span>
+<span class="t-out">Hi, I'm Riccardo. Yes, another engineer, but
+(mostly) fun at parties.</span>
+
+<span class="t-prompt">$</span> <span class="t-cmd">cat ./about.txt</span>
+<span class="t-out">I studied in Milan and now I'm in Berkeley.
+Translation: I've moved around a lot, collected
+too many student IDs, and somehow still haven't
+figured out how to cook pasta properly (yes,
+I know, shame on me, I'm Italian).</span>
+
+<span class="t-prompt">$</span> <span class="t-cmd">ls ./now/</span>
+<span class="t-out">hydramarl/   klip_ppo/   drift_happens/</span>
+
+<span class="t-prompt">$</span> <span class="t-cmd">echo $LOOKING_FOR</span>
+<span class="t-out">AI / ML / RL · PM · Growth · Product Marketing
+→ places where data and gut both get to talk.</span>
+
+<span class="t-prompt">$</span> <span class="t-cmd">echo $INTERESTS</span>
+<span class="t-out">🎾 padel  ·  🏃 <a class="t-link" href="https://live.chronotrack.com/event/89259/results/entry/75891477" target="_blank" rel="noopener">running</a>  ·  ⚽ <span class="t-inter-i">Inter</span> <span class="t-inter-m">Milan</span>  ·  ✈️ travel</span>
+
+<span class="t-prompt">$</span> <span class="t-cursor">_</span></code></pre>
+        </div>
+
+        <div class="socials">
+          <a class="social" href="https://github.com/riccardocolletti-berkeley" target="_blank" rel="noopener" data-handle="@riccardocolletti-berkeley">
+            <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.93 10.93 0 0 1 5.74 0c2.19-1.48 3.15-1.17 3.15-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.14 0 .31.21.67.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+            </svg>
+            <span class="social__label">github<span class="social__handle">@riccardocolletti-berkeley</span></span>
+          </a>
+          <a class="social" href="https://www.linkedin.com/in/riccardo-colletti/" target="_blank" rel="noopener" data-handle="@riccardo-colletti">
+            <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zM6.5 6.73c-.97 0-1.75-.79-1.75-1.76S5.53 3.21 6.5 3.21s1.75.79 1.75 1.76S7.47 6.73 6.5 6.73zM20 19h-3v-5.6c0-3.37-4-3.11-4 0V19h-3V8h3v1.77c1.4-2.59 7-2.78 7 2.47V19z"/>
+            </svg>
+            <span class="social__label">linkedin<span class="social__handle">@riccardo-colletti</span></span>
+          </a>
+          <a class="social" href="https://www.instagram.com/colletti_riccardo/" target="_blank" rel="noopener" data-handle="@colletti_riccardo">
+            <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M17.5 2.5h-11A4 4 0 0 0 2.5 6.5v11a4 4 0 0 0 4 4h11a4 4 0 0 0 4-4v-11a4 4 0 0 0-4-4ZM12 8.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5Zm5.7-1.1a.7.7 0 1 1-.7-.7.7.7 0 0 1 .7.7Z"/>
+            </svg>
+            <span class="social__label">instagram<span class="social__handle">@colletti_riccardo</span></span>
+          </a>
+          <a class="social" href="mailto:riccardo_colletti@berkeley.edu" data-handle="riccardo_colletti@berkeley.edu">
+            <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5h18v11H3zM3 7l9 6.5L21 7"/>
+            </svg>
+            <span class="social__label">email<span class="social__handle">riccardo_colletti</span></span>
+          </a>
+        </div>
+
+        </div>
+
+        <aside class="hero__photo">
+          <div class="hero__photo-bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="hero__photo-title">~/me/riccardo.jpg</span>
+          </div>
+          <img class="hero__photo-img" src="assets/photos/riccardo.jpg" alt="Riccardo at the Big Game, Stanford Stadium" />
+          <div class="hero__photo-caption">
+            📍 Stanford Stadium · the Big Game (Cal colors, enemy turf)
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section__head">
+        <span class="section__num">// 01</span>
+        <h2 class="section__title">about</h2>
+        <span class="section__sub">/* who, what, why */</span>
+      </div>
+      <div class="about">
+        <p class="about__lead reveal">
+          Hi, I'm Riccardo. I do research in <em>reinforcement learning</em>,
+          from the theory behind policy optimization to systems where many
+          agents learn together. I've just finished my MEng in EECS at UC
+          Berkeley, after a Master's at Bocconi and an engineering degree at
+          Politecnico di Torino. Three countries, three degrees, and probably
+          too much espresso.
+        </p>
+        <p class="about__body reveal">
+          Sports taught me discipline and how to take feedback without taking
+          it personally. Engineering taught me rigor. Business taught me that
+          rigor, on its own, is rarely enough. Volunteering reminded me that
+          not everything is about moving faster, and that sometimes stopping
+          to pay attention is part of doing meaningful work.
+        </p>
+        <p class="about__body reveal">
+          When something doesn't make sense or refuses to work, I tend to obsess
+          over it until it gives in. Everything else, less so. I work best with
+          people I can learn from, who raise the bar, and who make the work
+          fun.
+        </p>
+      </div>
+
+      <div class="stack stack--wide reveal">
+        <span class="stack__h">// riccardo.stack</span>
+        <div class="stack__wide-grid">
+          <div class="stack__row">
+            <span class="stack__k">fuel</span>
+            <span class="stack__v">espresso · pasta · gelato</span>
+          </div>
+          <div class="stack__row">
+            <span class="stack__k">training</span>
+            <span class="stack__v">padel (sponsored, top 200 italy) · running · swimming</span>
+          </div>
+          <div class="stack__row">
+            <span class="stack__k">team</span>
+            <span class="stack__v">Inter Milan: for the highs, the lows, and the swearing in between</span>
+          </div>
+          <div class="stack__row">
+            <span class="stack__k">moves</span>
+            <span class="stack__v">turin → milan → ireland → milan → berkeley</span>
+          </div>
+          <div class="stack__row">
+            <span class="stack__k">langs</span>
+            <span class="stack__v">italian · english (ielts 8/9) · latin (rusty) · french (nodding politely)</span>
+          </div>
+          <div class="stack__row">
+            <span class="stack__k">volunteering</span>
+            <span class="stack__v">OFTAL (transport coordinator) · Banco Alimentare · AGAPE Onlus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="snap-panel snap-panel--travel reveal">
+        <div class="snap-panel__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="snap-panel__title">~/life/</span>
+          <span class="snap-panel__count">5 frames</span>
+        </div>
+        <div class="snap-panel__grid snap-panel__grid--5">
+          <figure class="frame" data-src="assets/photos/padel.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/padel.jpg')"></div>
+            <figcaption><span class="frame__n">01</span><span class="frame__name">padel.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/corsa.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/corsa.jpg')"></div>
+            <figcaption><span class="frame__n">02</span><span class="frame__name">running.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/ski_italy.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/ski_italy.jpg')"></div>
+            <figcaption><span class="frame__n">03</span><span class="frame__name">ski_italy.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/warriors.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/warriors.jpg')"></div>
+            <figcaption><span class="frame__n">04</span><span class="frame__name">warriors.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/party.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/party.jpg')"></div>
+            <figcaption><span class="frame__n">05</span><span class="frame__name">party.jpg</span></figcaption>
+          </figure>
+        </div>
+        <div class="snap-panel__bar snap-panel__bar--mid">
+          <span class="snap-panel__title">~/life/travel/</span>
+          <span class="snap-panel__count">6 frames</span>
+        </div>
+        <div class="snap-panel__grid snap-panel__grid--6">
+          <figure class="frame" data-src="assets/photos/cambogia.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/cambogia.jpg')"></div>
+            <figcaption><span class="frame__n">01</span><span class="frame__name">cambodia.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/finlandia.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/finlandia.jpg')"></div>
+            <figcaption><span class="frame__n">02</span><span class="frame__name">finland.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/toronto.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/toronto.jpg')"></div>
+            <figcaption><span class="frame__n">03</span><span class="frame__name">toronto.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/golden_gate.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/golden_gate.jpg')"></div>
+            <figcaption><span class="frame__n">04</span><span class="frame__name">golden_gate.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/hollywood.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/hollywood.jpg')"></div>
+            <figcaption><span class="frame__n">05</span><span class="frame__name">hollywood.jpg</span></figcaption>
+          </figure>
+          <figure class="frame" data-src="assets/photos/grand_canyon.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/grand_canyon.jpg')"></div>
+            <figcaption><span class="frame__n">06</span><span class="frame__name">grand_canyon.jpg</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section__head">
+        <span class="section__num">// 02</span>
+        <h2 class="section__title">current research</h2>
+        <span class="section__sub">/* what I'm building right now */</span>
+      </div>
+      <div class="work">
+
+        <article class="card reveal has-viz" id="hydramarl">
+          <div class="card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card__file">~/research/hydramarl.md</span>
+            <span class="card__when">2026 · neurips '26 main track · under review</span>
+          </div>
+          <div class="card__body">
+            <div class="card__viz">
+              <div class="hydra">
+                <svg class="hydra__svg" viewBox="0 0 400 232" role="img" aria-label="A population-shared trunk feeding per-agent heads; one continuous parameter moves between full sharing and full independence.">
+                  <!-- agent inputs -->
+                  <g font-family="monospace" font-size="10" fill="#7d8895">
+                    <circle cx="46" cy="38"  r="5" fill="none" stroke="#8fffb6" stroke-width="1.3"/>
+                    <circle cx="46" cy="90"  r="5" fill="none" stroke="#8fffb6" stroke-width="1.3"/>
+                    <circle cx="46" cy="142" r="5" fill="none" stroke="#8fffb6" stroke-width="1.3"/>
+                    <circle cx="46" cy="194" r="5" fill="none" stroke="#8fffb6" stroke-width="1.3"/>
+                    <text x="20" y="42">a1</text><text x="20" y="94">a2</text>
+                    <text x="20" y="146">a3</text><text x="20" y="198">a4</text>
+                  </g>
+                  <!-- shared regime -->
+                  <g class="hy-shared">
+                    <path d="M52 38 C 100 38, 110 100, 148 108" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <path d="M52 90 C 100 90, 110 108, 148 112" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <path d="M52 142 C 100 142, 110 124, 148 120" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <path d="M52 194 C 100 194, 110 132, 148 124" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <rect x="148" y="92" width="96" height="48" rx="6" fill="rgba(110,231,255,0.10)" stroke="#6ee7ff" stroke-opacity="0.75" stroke-width="1.3"/>
+                    <text x="196" y="112" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#6ee7ff" font-weight="700">shared</text>
+                    <text x="196" y="126" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#6ee7ff" font-weight="700">trunk</text>
+                    <path d="M244 108 C 280 100, 290 42, 306 38"  fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <path d="M244 112 C 280 108, 290 90, 306 90"  fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <path d="M244 120 C 280 124, 290 142, 306 142" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                    <path d="M244 124 C 280 132, 290 194, 306 194" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.3"/>
+                  </g>
+                  <!-- independent regime -->
+                  <g class="hy-indep">
+                    <line x1="52" y1="38"  x2="306" y2="38"  stroke="#ff5cae" stroke-opacity="0.4" stroke-width="1.2"/>
+                    <line x1="52" y1="90"  x2="306" y2="90"  stroke="#ff5cae" stroke-opacity="0.4" stroke-width="1.2"/>
+                    <line x1="52" y1="142" x2="306" y2="142" stroke="#ff5cae" stroke-opacity="0.4" stroke-width="1.2"/>
+                    <line x1="52" y1="194" x2="306" y2="194" stroke="#ff5cae" stroke-opacity="0.4" stroke-width="1.2"/>
+                    <g fill="rgba(255,92,174,0.08)" stroke="#ff5cae" stroke-opacity="0.6" stroke-width="1.1">
+                      <rect x="148" y="28"  width="96" height="20" rx="4"/>
+                      <rect x="148" y="80"  width="96" height="20" rx="4"/>
+                      <rect x="148" y="132" width="96" height="20" rx="4"/>
+                      <rect x="148" y="184" width="96" height="20" rx="4"/>
+                    </g>
+                  </g>
+                  <!-- per-agent heads -->
+                  <g fill="rgba(255,92,174,0.10)" stroke="#ff5cae" stroke-opacity="0.8" stroke-width="1.2">
+                    <rect x="306" y="27"  width="52" height="22" rx="4"/>
+                    <rect x="306" y="79"  width="52" height="22" rx="4"/>
+                    <rect x="306" y="131" width="52" height="22" rx="4"/>
+                    <rect x="306" y="183" width="52" height="22" rx="4"/>
+                  </g>
+                  <g font-family="monospace" font-size="9.5" fill="#ff5cae" text-anchor="middle" font-weight="700">
+                    <text x="332" y="41">head 1</text><text x="332" y="93">head 2</text>
+                    <text x="332" y="145">head 3</text><text x="332" y="197">head 4</text>
+                  </g>
+                  <text x="200" y="224" text-anchor="middle" font-family="monospace" font-size="10" fill="#8a909a">one parameter λ moves between the two regimes</text>
+                </svg>
+              </div>
+              <div class="card__viz-cap">
+                <span class="live"></span>
+                <span>actor &amp; critic · shared trunk ⇄ per-agent heads</span>
+                <span class="card__viz-read hydra__state">λ = 1.00 · shared</span>
+              </div>
+            </div>
+            <h3 class="card__title">HydraMARL</h3>
+            <p class="card__desc card__desc--desktop">
+              A foundational study of <em>parameter sharing</em> in cooperative
+              multi-agent reinforcement learning. HydraMARL decomposes each
+              agent's policy and value networks into a population-shared trunk
+              and per-agent heads, applied symmetrically across actor and
+              critic; a single continuous parameter spans the full spectrum
+              from complete sharing to full independence. Systematic
+              experiments on the <em>VMAS</em> benchmark suite identify the
+              optimal sharing regime and characterise its sensitivity to task
+              structure, degree of cooperation, and population size.
+            </p>
+            <p class="card__desc card__desc--mobile">
+              When many AI agents learn together, parts of their neural
+              networks can be <em>shared</em>. We isolate how much sharing
+              actually helps, and expose the real trade-off between learning
+              fast and learning to specialize.
+            </p>
+            <ul class="card__tags"><li>multi-agent rl</li><li>parameter sharing</li><li>neurips '26</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal has-viz" id="klip-ppo">
+          <div class="card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card__file">~/research/klip_ppo.md</span>
+            <span class="card__when">2026 · arXiv preprint · <a href="https://klip-ppo.org" target="_blank" rel="noopener">klip-ppo.org ↗</a></span>
+          </div>
+          <div class="card__body">
+            <div class="card__viz">
+              <div class="kplane">
+                <svg class="kplane__svg" viewBox="0 0 400 282" role="img" aria-label="The ratio–advantage plane: clipping only zeroes the gradient in the two red corners.">
+                  <rect x="159" y="26"  width="112" height="214" fill="#6ee7ff" opacity="0.05"/>
+                  <rect class="kp-kill" x="271" y="26"  width="113" height="107" fill="#ff5cae"/>
+                  <rect class="kp-kill" x="46"  y="133" width="113" height="107" fill="#ff5cae"/>
+                  <rect x="46"  y="26"  width="113" height="107" fill="#6ee7ff" opacity="0.08"/>
+                  <rect x="271" y="133" width="113" height="107" fill="#6ee7ff" opacity="0.08"/>
+                  <line x1="159" y1="26" x2="159" y2="240" stroke="#e6edf3" stroke-opacity="0.32" stroke-width="1.1" stroke-dasharray="4 4"/>
+                  <line x1="271" y1="26" x2="271" y2="240" stroke="#e6edf3" stroke-opacity="0.32" stroke-width="1.1" stroke-dasharray="4 4"/>
+                  <line x1="46" y1="133" x2="384" y2="133" stroke="#e6edf3" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="2 3"/>
+                  <line x1="215" y1="26" x2="215" y2="240" stroke="#e6edf3" stroke-opacity="0.14" stroke-width="1"/>
+                  <rect x="46" y="26" width="338" height="214" fill="none" stroke="#6ec8ff" stroke-opacity="0.2" stroke-width="1.3"/>
+                  <text x="41" y="137" text-anchor="end" font-family="monospace" font-size="10" fill="#7d8895">0</text>
+                  <text x="54" y="40"  font-family="monospace" font-size="11" fill="#4f5a66">+</text>
+                  <text x="54" y="233" font-family="monospace" font-size="11" fill="#4f5a66">−</text>
+                  <text x="327" y="78"  text-anchor="middle" font-family="monospace" font-size="12" fill="#ff5cae" font-weight="700">I_kill</text>
+                  <text x="102" y="196" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff5cae" font-weight="700">I_kill</text>
+                  <text x="102" y="78"  text-anchor="middle" font-family="monospace" font-size="12" fill="#6ee7ff" font-weight="700">I_pass</text>
+                  <text x="327" y="196" text-anchor="middle" font-family="monospace" font-size="12" fill="#6ee7ff" font-weight="700">I_pass</text>
+                  <text x="215" y="118" text-anchor="middle" font-family="monospace" font-size="12" fill="#6ee7ff" font-weight="700">I_in</text>
+                  <text x="159" y="256" text-anchor="middle" font-family="monospace" font-size="10" fill="#7d8895">1−ε</text>
+                  <text x="215" y="256" text-anchor="middle" font-family="monospace" font-size="10" fill="#7d8895">1</text>
+                  <text x="271" y="256" text-anchor="middle" font-family="monospace" font-size="10" fill="#7d8895">1+ε</text>
+                  <text x="215" y="278" text-anchor="middle" font-family="monospace" font-size="11" fill="#8a909a">importance ratio  w  →</text>
+                  <text x="16" y="133" text-anchor="middle" font-family="monospace" font-size="11" fill="#8a909a" transform="rotate(-90 16 133)">advantage  Â</text>
+                  <circle class="kp-marker-halo" cx="215" cy="133" r="11" fill="#ffe066"/>
+                  <circle class="kp-marker" cx="215" cy="133" r="4.6" fill="#ffe066" stroke="#05060a" stroke-width="1.2"/>
+                </svg>
+              </div>
+              <div class="card__viz-cap">
+                <span class="live"></span>
+                <span>w–Â plane · where clipping suppresses the update</span>
+                <span class="card__viz-read kplane__state is-in">I_in · β = 0</span>
+              </div>
+            </div>
+            <h3 class="card__title">KLip-PPO</h3>
+            <p class="card__desc card__desc--desktop">
+              A theoretical unification of <em>PPO-Clip</em> and <em>PPO-KL</em>,
+              the two dominant variants of the most widely used policy-gradient
+              algorithm in modern reinforcement learning. We prove a per-sample
+              equivalence: the gradient of the clipped surrogate is exactly a
+              <em>KL penalty</em> whose coefficient varies per sample, in closed
+              form in the importance ratio and the advantage. The identity holds
+              at every update step, and on five MuJoCo benchmarks the two losses
+              trace indistinguishable training curves. The result collapses what
+              was treated as a divide in the field into a single design space,
+              and uncovers a principled family of generalizations of PPO.
+            </p>
+            <p class="card__desc card__desc--mobile">
+              <em>PPO</em> is the most widely used algorithm in modern RL. Its
+              two main variants were treated as different ideas: we prove they
+              compute the same update, and verify the identity across five
+              MuJoCo benchmarks.
+            </p>
+            <ul class="card__tags"><li>rl theory</li><li>ppo</li><li>policy optimization</li></ul>
+            <div class="card__links">
+              <a class="card__link card__link--primary" href="https://klip-ppo.org" target="_blank" rel="noopener">klip-ppo.org <span class="arw">↗</span></a>
+              <a class="card__link" href="https://arxiv.org/abs/2606.23932" target="_blank" rel="noopener">arXiv <span class="arw">↗</span></a>
+              <a class="card__link" href="https://github.com/learning-mechanisms/KLip-PPO" target="_blank" rel="noopener">code <span class="arw">↗</span></a>
+              <a class="card__link" href="https://wandb.ai/KLip-PPO/KLip-PPO" target="_blank" rel="noopener">w&amp;b artifacts <span class="arw">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal has-viz" id="drift-happens">
+          <div class="card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card__file">~/research/drift_happens.md</span>
+            <span class="card__when">2026 · published @ qcds, ecml-pkdd '26 · <a href="https://drift-happens.org" target="_blank" rel="noopener">drift-happens.org ↗</a></span>
+          </div>
+          <div class="card__body">
+            <div class="card__viz">
+              <div class="dstrip">
+                <div class="dstrip__win">
+                  <img class="dstrip__track" src="assets/projects/drift/yearbook_mean_portrait.png" alt="The mean yearbook portrait per decade, 1910s to 2010s." />
+                </div>
+              </div>
+              <div class="card__viz-cap">
+                <span class="live"></span>
+                <span>~/yearbook/mean_face · mean portrait per decade</span>
+                <span class="card__viz-read dstrip__decade">1910s</span>
+              </div>
+              <div class="salviz">
+                <div class="salgrid2">
+                  <span aria-hidden="true"></span>
+                  <span class="sg-col" data-col="0">eval 1960</span>
+                  <span class="sg-col" data-col="1">eval 1980</span>
+                  <span class="sg-col" data-col="2">eval 2000</span>
+
+                  <span class="sg-row sg-row--cnn">cnn_l</span>
+                  <div class="sg-cell" data-col="0"><img src="assets/projects/drift/sal_cnn_60.png" alt="CNN saliency, eval 1960: attribution concentrates on facial features." /></div>
+                  <div class="sg-cell" data-col="1"><img src="assets/projects/drift/sal_cnn_80.png" alt="CNN saliency, eval 1980." /></div>
+                  <div class="sg-cell" data-col="2"><img src="assets/projects/drift/sal_cnn_00.png" alt="CNN saliency, eval 2000." /></div>
+
+                  <span class="sg-row sg-row--resnet">resnet_s</span>
+                  <div class="sg-cell" data-col="0"><img src="assets/projects/drift/sal_resnet_60.png" alt="ResNet saliency, eval 1960." /></div>
+                  <div class="sg-cell" data-col="1"><img src="assets/projects/drift/sal_resnet_80.png" alt="ResNet saliency, eval 1980." /></div>
+                  <div class="sg-cell" data-col="2"><img src="assets/projects/drift/sal_resnet_00.png" alt="ResNet saliency, eval 2000." /></div>
+
+                  <span class="sg-row sg-row--mlp">mlp_l</span>
+                  <div class="sg-cell" data-col="0"><img src="assets/projects/drift/sal_mlp_60.png" alt="MLP saliency, eval 1960: attribution spread over the whole image." /></div>
+                  <div class="sg-cell" data-col="1"><img src="assets/projects/drift/sal_mlp_80.png" alt="MLP saliency, eval 1980." /></div>
+                  <div class="sg-cell" data-col="2"><img src="assets/projects/drift/sal_mlp_00.png" alt="MLP saliency, eval 2000." /></div>
+                </div>
+                <div class="card__viz-cap">
+                  <span class="live"></span>
+                  <span>saliency · trained ≤ 1950 · where each net looks</span>
+                  <span class="card__viz-read salviz__year">eval 1960</span>
+                </div>
+              </div>
+            </div>
+            <h3 class="card__title">Drift Happens</h3>
+            <p class="card__desc card__desc--desktop">
+              A large-scale empirical study of how neural architectures hold up
+              under <em>temporal distribution shift</em>. Using <em>temporal
+              drift matrices</em> (models trained on cumulative history and
+              evaluated on every period) we compare MLPs, CNNs, Transformers,
+              and frozen pretrained encoders across a century of yearbook
+              portraits, a decade of Amazon reviews, and 25 years of arXiv
+              abstracts. In-distribution accuracy is not a reliable guide to
+              temporal robustness: the architectures that dominate the training
+              period often degrade fastest, while <em>frozen pretrained
+              encoders</em> trade accuracy for stability.
+            </p>
+            <p class="card__desc card__desc--mobile">
+              AI models lose accuracy as the world drifts away from their
+              training data. We measured that decay across decades of faces,
+              reviews, and papers: the models that start strongest are often
+              the first to degrade.
+            </p>
+            <ul class="card__tags"><li>neural nets</li><li>distribution shift</li><li>empirical</li></ul>
+            <div class="card__links">
+              <a class="card__link card__link--primary" href="https://drift-happens.org" target="_blank" rel="noopener">drift-happens.org <span class="arw">↗</span></a>
+              <a class="card__link" href="https://drift-happens.org/drift-happens.pdf" target="_blank" rel="noopener">paper <span class="arw">↗</span></a>
+              <a class="card__link" href="https://github.com/learning-mechanisms/drift-happens" target="_blank" rel="noopener">code <span class="arw">↗</span></a>
+              <a class="card__link" href="https://wandb.ai/drift-happens/drift-happens" target="_blank" rel="noopener">w&amp;b artifacts <span class="arw">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal has-viz" id="hold-your-plate">
+          <div class="card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card__file">~/robotics/hold_your_plate.md</span>
+            <span class="card__when">2025 · robotics · <a href="https://holdurpla7e.org" target="_blank" rel="noopener">holdurpla7e.org ↗</a></span>
+          </div>
+          <div class="card__body">
+            <div class="card__viz">
+              <div class="bop">
+                <video class="bop__video" muted loop playsinline preload="metadata" poster="assets/projects/plate/arm_hero_poster.png" aria-label="A UR7e arm balancing a red ball on a tilting plate, policy rollout.">
+                  <source src="assets/projects/plate/arm_hero.webm" type="video/webm" />
+                  <source src="assets/projects/plate/arm_hero.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="card__viz-cap">
+                <span class="live"></span>
+                <span>~/sim/arm_hero.webm · policy rollout</span>
+                <span class="card__viz-read bop__state">t=0.0s</span>
+              </div>
+              <div class="bop-fig" data-src="assets/projects/plate/ppo_benchmark_bar.png" data-name="ppo_benchmark_bar.png" role="button" tabindex="0" aria-label="Open the PID vs Residual PPO benchmark chart">
+                <img src="assets/projects/plate/ppo_benchmark_bar.png" alt="Bar charts comparing PID and Residual PPO across 10 domain conditions: ball drop rate and tracking error." />
+              </div>
+              <div class="card__viz-cap">
+                <span class="live"></span>
+                <span>pid vs residual ppo · 10 conditions · click to zoom</span>
+                <span class="card__viz-read">drop 70→3.3%</span>
+              </div>
+            </div>
+            <h3 class="card__title">Hold Your Plate</h3>
+            <p class="card__desc card__desc--desktop">
+              Real-time ball-on-plate stabilization on a <em>UR7e</em>
+              collaborative arm, with ArUco vision tracking through an Intel
+              RealSense camera, orchestrated on a full <em>ROS 2</em> stack and
+              a MuJoCo simulation pipeline. The system compares three
+              controllers: a hand-tuned <em>PID</em>, an <em>MPC</em> on the
+              linearized dynamics, and a <em>residual learning</em> approach
+              that augments the PID with a small PPO policy trained under
+              domain randomization (varied mass, friction, sensing delay),
+              pairing the reliability of model-based control with learned
+              robustness to unmodeled effects.
+            </p>
+            <p class="card__desc card__desc--mobile">
+              A <em>UR7e robotic arm</em> balancing a ball on a tilting plate,
+              with a camera tracking it in real time. Compares three
+              controllers (classical, model-based, and learned) on a <em>ROS 2</em>
+              stack.
+            </p>
+            <ul class="card__tags"><li>ros 2</li><li>residual rl</li><li>ur7e</li><li>mujoco</li><li>vision</li></ul>
+            <div class="card__links">
+              <a class="card__link card__link--primary" href="https://holdurpla7e.org" target="_blank" rel="noopener">holdurpla7e.org <span class="arw">↗</span></a>
+              <a class="card__link" href="https://github.com/riccardocolletti-berkeley/hold-ur-pla7e" target="_blank" rel="noopener">code <span class="arw">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card__file">~/research/demand.md</span>
+            <span class="card__when">2026 · framework</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">DEMAND <span class="card__alt">/ no-steady-state</span></h3>
+            <p class="card__desc card__desc--desktop">
+              A research framework for multi-agent reinforcement learning under
+              <em>non-stationary demand</em>, targeting fleet dispatch problems
+              in delivery, ride-hailing, and logistics. The platform models the
+              full operational stack (order matching, routing, courier
+              repositioning) under realistic exogenous drift, with plug-and-play
+              integration of 15+ RL algorithms (PPO, SAC, multi-agent variants,
+              classical heuristics). Designed for the controlled drift studies
+              that current MARL benchmarks cannot support.
+            </p>
+            <p class="card__desc card__desc--mobile">
+              A research platform for studying how AI dispatch systems (food
+              delivery, ride-hailing) hold up when demand keeps changing. Full
+              simulation pipeline with many algorithms wired in.
+            </p>
+            <ul class="card__tags"><li>multi-agent rl</li><li>simulation</li><li>operations</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card__file">~/capstone/no_free_lunch.md</span>
+            <span class="card__when">2026 · meng capstone thesis · informs/meituan</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">No Free Lunch for Food Delivery</h3>
+            <p class="card__desc card__desc--desktop">
+              A multi-objective study of courier-assignment policies on real
+              Meituan delivery data, where customer latency, courier earnings,
+              platform margin, and restaurant reliability fundamentally conflict.
+              We benchmark classical heuristics and modern reinforcement learning,
+              then propose <em>PRISM</em>: a hybrid architecture combining learned
+              cost prediction, RL, and constraint optimization that treats Pareto
+              trade-offs as first-class objectives instead of collapsing them
+              into a scalar reward.
+            </p>
+            <p class="card__desc card__desc--mobile">
+              In food delivery, customers, couriers, platforms, and restaurants
+              all want different things from the same decision. Built on real
+              Meituan data, <em>PRISM</em> treats those trade-offs as
+              first-class instead of pretending they aren't there.
+            </p>
+            <ul class="card__tags"><li>operations research</li><li>multi-objective</li><li>real data</li></ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="snapshots">
+      <div class="section__head">
+        <span class="section__num">// 03</span>
+        <h2 class="section__title">snapshots</h2>
+        <span class="section__sub">/* a portrait of my life · the [EE] ones hide easter eggs */</span>
+      </div>
+
+      <div class="snap-panel reveal">
+        <div class="snap-panel__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="snap-panel__title">~/life/quadri/</span>
+          <span class="snap-panel__count">5 frames · easter eggs inside</span>
+        </div>
+        <div class="snap-panel__grid snap-panel__grid--5">
+          <figure class="frame frame--ee" data-src="assets/photos/quadro1.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/quadro1.jpg')"></div>
+            <figcaption><span class="frame__n">01</span><span class="frame__name">quadro_01.jpg</span><span class="frame__tag">EE</span></figcaption>
+          </figure>
+          <figure class="frame frame--ee" data-src="assets/photos/quadro2.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/quadro2.jpg')"></div>
+            <figcaption><span class="frame__n">02</span><span class="frame__name">quadro_02.jpg</span><span class="frame__tag">EE</span></figcaption>
+          </figure>
+          <figure class="frame frame--ee" data-src="assets/photos/quadro3.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/quadro3.jpg')"></div>
+            <figcaption><span class="frame__n">03</span><span class="frame__name">quadro_03.jpg</span><span class="frame__tag">EE</span></figcaption>
+          </figure>
+          <figure class="frame frame--ee" data-src="assets/photos/quadro4.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/quadro4.jpg')"></div>
+            <figcaption><span class="frame__n">04</span><span class="frame__name">quadro_04.jpg</span><span class="frame__tag">EE</span></figcaption>
+          </figure>
+          <figure class="frame frame--ee" data-src="assets/photos/quadro5.jpg">
+            <div class="frame__img" style="background-image:url('assets/photos/quadro5.jpg')"></div>
+            <figcaption><span class="frame__n">05</span><span class="frame__name">quadro_05.jpg</span><span class="frame__tag">EE</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox__close" aria-label="close">esc · ✕</button>
+      <div class="lightbox__inner">
+        <img class="lightbox__img" alt="" />
+        <div class="lightbox__meta"><span id="lb-name"></span><span id="lb-tag"></span></div>
+      </div>
+    </div>
+
+    <section class="section" id="cv">
+      <div class="section__head">
+        <span class="section__num">// 04</span>
+        <h2 class="section__title">cv</h2>
+        <span class="section__sub">/* timeline */</span>
+      </div>
+
+      <div class="cv-block reveal">
+        <h3 class="cv-block__h"># education</h3>
+        <ol class="cv-list">
+          <li class="cv-row cv-row--photo">
+            <span class="cv-row__when">Aug 2025 → May 2026</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where"><a href="https://eecs.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley</a> · Berkeley, CA</span>
+                <span class="cv-row__gpa">GPA 4.0 / 4.0</span>
+              </div>
+              <span class="cv-row__what">MEng in Electrical Engineering & Computer Sciences</span>
+              <span class="cv-row__note">Statistical learning theory (<a href="https://classes.berkeley.edu/content/2025-fall-compsci-c281a-001-lec-001" target="_blank" rel="noopener">CS C281A</a>, Recht), machine learning (<a href="https://classes.berkeley.edu/content/2025-fall-compsci-289a-001-lec-001" target="_blank" rel="noopener">CS 289A</a>), deep reinforcement learning (<a href="https://classes.berkeley.edu/content/2026-spring-compsci-285-001-lec-001" target="_blank" rel="noopener">CS 285</a>, Levine), optimization (<a href="https://classes.berkeley.edu/content/2025-fall-eecs-227at-001-lec-001" target="_blank" rel="noopener">EECS 227AT</a>, Sojoudi), robotics (<a href="https://classes.berkeley.edu/content/2026-spring-eecs-c206a-001-lec-001" target="_blank" rel="noopener">EECS C206A</a>). Capstone advised by Prof. Paul Grigas (IEOR). <em>Fung Excellence Scholar</em>: Berkeley Engineering merit award for top MEng students.</span>
+            </div>
+            <div class="cv-row__pics">
+              <span class="cv-pic" role="button" tabindex="0" data-src="assets/photos/cal.jpg" data-name="berkeley.jpg" style="background-image:url('assets/photos/cal.jpg'); background-position: center" aria-label="Open berkeley.jpg"></span>
+            </div>
+          </li>
+          <li class="cv-row cv-row--photo">
+            <span class="cv-row__when">Sep 2023 → May 2025</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where"><a href="https://www.unibocconi.eu/" target="_blank" rel="noopener">Bocconi University</a> · Milan, IT</span>
+                <span class="cv-row__gpa">110L / 110 (cum laude)</span>
+              </div>
+              <span class="cv-row__what">Master in Marketing & Communication (MiMeC)</span>
+              <span class="cv-row__note"><em>Valedictorian</em>: best overall student of the cohort. Merit-based scholarship. Quantitative program focused on analytics, consumer behavior, pricing strategy, and data-informed decision-making.</span>
+            </div>
+            <div class="cv-row__pics">
+              <span class="cv-pic" role="button" tabindex="0" data-src="assets/photos/bocconi.jpg" data-name="bocconi.jpg" style="background-image:url('assets/photos/bocconi.jpg'); background-position: center" aria-label="Open bocconi.jpg"></span>
+            </div>
+          </li>
+          <li class="cv-row cv-row--photo">
+            <span class="cv-row__when">Sep 2017 → Jul 2021</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where"><a href="https://www.polito.it/en" target="_blank" rel="noopener">Politecnico di Torino</a> · Turin, IT</span>
+                <span class="cv-row__gpa">110L / 110 (cum laude)</span>
+              </div>
+              <span class="cv-row__what">BSc in Electronic & Communications Engineering</span>
+              <span class="cv-row__note">Top of class · English-taught ICT engineering program. <em>Honors track, Intraprendenti (Young Talents Program)</em>: top 200 students university-wide. Thesis on Digital PLL simulation.</span>
+            </div>
+            <div class="cv-row__pics">
+              <span class="cv-pic" role="button" tabindex="0" data-src="assets/photos/polito.jpg" data-name="polito_graduation.jpg" style="background-image:url('assets/photos/polito.jpg'); background-position: center 20%" aria-label="Open polito_graduation.jpg"></span>
+            </div>
+          </li>
+          <li class="cv-row cv-row--photo">
+            <span class="cv-row__when">Aug 2015 → Jun 2016</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where"><a href="https://ccrcork.com/" target="_blank" rel="noopener">Coláiste Chríost Rí</a> · Cork, IE</span>
+              </div>
+              <span class="cv-row__what">Exchange year · English-speaking secondary school</span>
+              <span class="cv-row__note">Full-immersion academic year alongside Irish peers, within the Liceo Scientifico Internazionale track. Played in the school basketball team.</span>
+            </div>
+            <div class="cv-row__pics">
+              <span class="cv-pic" role="button" tabindex="0" data-src="assets/photos/ireland_1.jpg" data-name="cork_uniform.jpg" style="background-image:url('assets/photos/ireland_1.jpg'); background-position: center 30%" aria-label="Open cork_uniform.jpg"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="cv-block reveal">
+        <h3 class="cv-block__h"># experience</h3>
+        <ol class="cv-list">
+          <li class="cv-row">
+            <span class="cv-row__when">Jan → Jul 2025</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where"><a href="https://www.lenovo.com/" target="_blank" rel="noopener">Lenovo</a> · Milan, IT</span>
+              </div>
+              <span class="cv-row__what">Marketing Specialist · CRM Digital Services</span>
+              <span class="cv-row__note">CRM and marketing analytics: customer segmentation, campaign analysis, CRM data exploration. Translated analytical insights into marketing and growth inputs inside a global, data-intensive corporate environment.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2021 → 2025</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where">Rialco S.R.L. · Milan, IT</span>
+              </div>
+              <span class="cv-row__what">CEO / Product Manager / Growth Manager</span>
+              <span class="cv-row__note">Owned strategic direction and P&L of a digital consulting firm. Led discovery → ship for digital products (web, e-commerce, internal tooling). Ran acquisition and conversion across SEO, paid, and social, defining KPIs and using analytics to prioritize what moved the funnel.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">Jan → Jul 2020</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where">Biesse Sistemi S.R.L. · Nizza Monferrato, IT</span>
+              </div>
+              <span class="cv-row__what">Intern · Software Development</span>
+              <span class="cv-row__note">Voice-controlled application for automated taxi booking: application logic and system integration alongside a senior software developer.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="cv-block reveal">
+        <h3 class="cv-block__h"># publications & preprints</h3>
+        <ol class="cv-list">
+          <li class="cv-row">
+            <span class="cv-row__when">May 2026</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where">HydraMARL: Isolating the Parameter-Sharing Spectrum in Multi-Agent Reinforcement Learning</span>
+                <span class="pub-status pub-status--review"><span class="pub-dot"></span>under review</span>
+              </div>
+              <span class="cv-row__what">Holzinger, R.* &amp; Colletti, R.*</span>
+              <span class="cv-row__note">Submitted to <em>NeurIPS 2026</em>, main track.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">Jun 2026</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where">KLip-PPO: A per-sample KL perspective on PPO-Clip</span>
+                <span class="pub-status pub-status--preprint"><span class="pub-dot"></span>preprint</span>
+              </div>
+              <span class="cv-row__what">Colletti, R.* &amp; Holzinger, R.*</span>
+              <span class="cv-row__note"><a href="https://arxiv.org/abs/2606.23932" target="_blank" rel="noopener">arXiv:2606.23932</a> · <a href="https://klip-ppo.org" target="_blank" rel="noopener">klip-ppo.org</a> · <a href="https://github.com/learning-mechanisms/KLip-PPO" target="_blank" rel="noopener">code</a> · <a href="https://wandb.ai/KLip-PPO/KLip-PPO" target="_blank" rel="noopener">w&amp;b artifacts</a> · NeurIPS 2026 workshop submission planned.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">Jun 2026</span>
+            <div class="cv-row__main">
+              <div class="cv-row__head">
+                <span class="cv-row__where">Drift Happens: An Empirical Study of Neural Architecture Robustness to Temporal Distribution Shift</span>
+                <span class="pub-status pub-status--published"><span class="pub-dot"></span>published</span>
+              </div>
+              <span class="cv-row__what">Holzinger, R.* &amp; Colletti, R.*</span>
+              <span class="cv-row__note">Published at <em>QCDS @ ECML-PKDD 2026</em> · <a href="https://drift-happens.org" target="_blank" rel="noopener">drift-happens.org</a> · <a href="https://github.com/learning-mechanisms/drift-happens" target="_blank" rel="noopener">code</a> · <a href="https://wandb.ai/drift-happens/drift-happens" target="_blank" rel="noopener">w&amp;b artifacts</a>.</span>
+            </div>
+          </li>
+        </ol>
+        <p class="cv-pdf">* equal contribution</p>
+      </div>
+
+      <div class="cv-block reveal">
+        <h3 class="cv-block__h"># awards & scholarships</h3>
+        <ol class="cv-list">
+          <li class="cv-row">
+            <span class="cv-row__when">2025</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>Fung Excellence Scholarship</em> · UC Berkeley</span>
+              <span class="cv-row__note">Awarded by Berkeley Engineering to top MEng candidates.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2025</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>Valedictorian + Merit-Based Scholarship</em> · Bocconi University</span>
+              <span class="cv-row__note">Best overall student of the cohort.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2025</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>Data Science and Machine Learning</em> · MIT IDSS</span>
+              <span class="cv-row__note">Making Data-Driven Decisions · professional certificate program (May–Oct 2025).</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2017 → 2021</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>Intraprendenti (Young Talents Program)</em> · Politecnico di Torino</span>
+              <span class="cv-row__note">Top 200 students university-wide.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2016</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>Italian Mathematical Olympiad, national finalist</em> · team competition</span>
+              <span class="cv-row__note">Flown back from the exchange year in Ireland for one week to compete at the national finals.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="cv-block reveal">
+        <h3 class="cv-block__h"># volunteering</h3>
+        <ol class="cv-list">
+          <li class="cv-row cv-row--photo">
+            <span class="cv-row__when">2010 → now</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>OFTAL</em> · volunteer, now Transport Coordinator</span>
+              <span class="cv-row__note">15+ years supporting pilgrimages that bring ill and economically disadvantaged people to Lourdes and other shrines.</span>
+            </div>
+            <div class="cv-row__pics">
+              <span class="cv-pic" role="button" tabindex="0" data-src="assets/photos/oftal_1.jpg" data-name="oftal.jpg" style="background-image:url('assets/photos/oftal_1.jpg')" aria-label="Open oftal.jpg"></span>
+              <span class="cv-pic" role="button" tabindex="0" data-src="assets/photos/oftal_2.jpg" data-name="lourdes.jpg" style="background-image:url('assets/photos/oftal_2.jpg')" aria-label="Open lourdes.jpg"></span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2014 → 2018</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>Fondazione Banco Alimentare Onlus</em></span>
+              <span class="cv-row__note">Food selection and distribution to families in need.</span>
+            </div>
+          </li>
+          <li class="cv-row">
+            <span class="cv-row__when">2014</span>
+            <div class="cv-row__main">
+              <span class="cv-row__what"><em>AGAPE Onlus</em></span>
+              <span class="cv-row__note">Food sorting and distribution for the local community.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <p class="cv-pdf reveal">
+        <span class="t-prompt">$</span> open
+        <a href="assets/cv.pdf" target="_blank" rel="noopener">cv.pdf ↗</a>
+        <span class="cv-pdf__sep">·</span>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">resume.pdf ↗</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <p class="footer__h"><span class="t-prompt">$</span> whoami</p>
+        <p class="footer__line">Riccardo Colletti</p>
+        <p class="footer__line">MEng EECS · UC Berkeley</p>
+        <p class="footer__line"><a href="mailto:riccardo_colletti@berkeley.edu">riccardo_colletti@berkeley.edu</a></p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h"><span class="t-prompt">$</span> ls ./find_me/</p>
+        <ul class="footer__links">
+          <li><a href="https://github.com/riccardocolletti-berkeley" target="_blank" rel="noopener">github ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/riccardo-colletti/" target="_blank" rel="noopener">linkedin ↗</a></li>
+          <li><a href="https://www.instagram.com/colletti_riccardo/" target="_blank" rel="noopener">instagram ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h"><span class="t-prompt">$</span> ls ./projects/</p>
+        <ul class="footer__links">
+          <li><a href="https://klip-ppo.org" target="_blank" rel="noopener">klip-ppo.org ↗</a></li>
+          <li><a href="https://drift-happens.org" target="_blank" rel="noopener">drift-happens.org ↗</a></li>
+          <li><a href="https://holdurpla7e.org" target="_blank" rel="noopener">holdurpla7e.org ↗</a></li>
+          <li><a href="assets/cv.pdf" target="_blank" rel="noopener">cv.pdf ↗</a> · <a href="assets/resume.pdf" target="_blank" rel="noopener">resume.pdf ↗</a></li>
+        </ul>
+      </div>
+      <p class="footer__meta">© <span id="year"></span> Riccardo Colletti · built with three.js + too much espresso · berkeley, ca</p>
+    </div>
+  </footer>
+
+  <script type="importmap">
+    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="scripts/hero.js"></script>
+  <script src="scripts/app.js" defer></script>
+  <script src="scripts/projects.js" defer></script>
+</body>
+</html>
