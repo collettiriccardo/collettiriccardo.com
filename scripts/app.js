@@ -1,23 +1,6 @@
 /* ---------- year ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* ---------- custom cursor ---------- */
-const cursor = document.querySelector(".cursor");
-let cx = 0, cy = 0, tx = 0, ty = 0;
-window.addEventListener("pointermove", (e) => { tx = e.clientX; ty = e.clientY; });
-
-(function loop() {
-  cx += (tx - cx) * 0.18;
-  cy += (ty - cy) * 0.18;
-  cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-  requestAnimationFrame(loop);
-})();
-
-document.querySelectorAll("a, button, .card").forEach((el) => {
-  el.addEventListener("pointerenter", () => cursor.classList.add("is-hover"));
-  el.addEventListener("pointerleave", () => cursor.classList.remove("is-hover"));
-});
-
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
