@@ -1,6 +1,10 @@
 /* ---------- year ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 
+document.querySelectorAll(".nav__lang a").forEach((a) => {
+  a.addEventListener("click", () => { a.href = a.pathname + location.hash; });
+});
+
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -40,7 +44,8 @@ document.querySelectorAll(".frame").forEach((f) => {
   f.tabIndex = 0;
   const open = () => {
     const name = f.querySelector(".frame__name")?.textContent || "";
-    const tag = f.classList.contains("frame--ee") ? "// easter egg inside" : "";
+    const egg = document.documentElement.lang === "it" ? "// easter egg dentro" : "// easter egg inside";
+    const tag = f.classList.contains("frame--ee") ? egg : "";
     openLightbox(f.dataset.src, name, tag);
   };
   f.addEventListener("click", open);

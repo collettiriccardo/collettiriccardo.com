@@ -3,7 +3,7 @@ import * as THREE from "three";
 /* ----------------------------------------------------------------------------
    Hero: 3D loss landscape with gradient descent walkers.
    Mouse rotates camera. Walkers descend the surface following the gradient
-   of a sum of gaussians — a real (if cartoon) optimization landscape.
+   of a sum of gaussians: a real (if cartoon) optimization landscape.
 ---------------------------------------------------------------------------- */
 
 const canvas = document.getElementById("hero-canvas");
