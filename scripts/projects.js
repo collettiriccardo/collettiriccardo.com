@@ -4,7 +4,7 @@
 
   /* ---------- hero terminal: commands type themselves on load ---------- */
   const term = document.querySelector(".terminal__body code");
-  if (term && !reduce) {
+  if (term && !reduce) document.fonts.ready.then(() => {
     const pre = term.parentElement;
     pre.style.minHeight = pre.offsetHeight + "px"; // no layout jump while typing
     const nodes = Array.from(term.childNodes);
@@ -29,7 +29,7 @@
         if (isOut) setTimeout(next, 130); else next();
       }
     })();
-  }
+  });
 
   /* ---------- section titles: matrix-style decode on first reveal ---------- */
   if (!reduce && "IntersectionObserver" in window) {

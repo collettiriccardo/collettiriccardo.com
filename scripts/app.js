@@ -5,6 +5,17 @@ document.querySelectorAll(".nav__lang a").forEach((a) => {
   a.addEventListener("click", () => { a.href = a.pathname + location.hash; });
 });
 
+const nav = document.querySelector(".nav");
+const navToggle = document.querySelector(".nav__toggle");
+const setNav = (open) => {
+  nav.classList.toggle("is-open", open);
+  document.documentElement.classList.toggle("nav-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+};
+navToggle?.addEventListener("click", () => setNav(!nav.classList.contains("is-open")));
+nav?.querySelectorAll(".nav__links a").forEach((a) => a.addEventListener("click", () => setNav(false)));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav?.classList.contains("is-open")) setNav(false); });
+
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

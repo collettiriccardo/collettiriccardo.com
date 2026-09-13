@@ -43,12 +43,15 @@
 
   <header class="nav">
     <a href="#top" class="nav__brand">colletti.r<span class="caret">_</span></a>
-    <nav class="nav__links">
-      <a href="#september"><span class="nav__num">01</span> september</a>
-      <a href="#about"><span class="nav__num">02</span> about</a>
-      <a href="#work"><span class="nav__num">03</span> research</a>
-      <a href="#snapshots"><span class="nav__num">04</span> snapshots</a>
-      <a href="#cv"><span class="nav__num">05</span> cv</a>
+    <button class="nav__toggle" type="button" aria-label="menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="nav-links">
+      <a href="#september"><span class="nav__num" aria-hidden="true">01</span> september</a>
+      <a href="#about"><span class="nav__num" aria-hidden="true">02</span> about</a>
+      <a href="#work"><span class="nav__num" aria-hidden="true">03</span> research</a>
+      <a href="#snapshots"><span class="nav__num" aria-hidden="true">04</span> snapshots</a>
+      <a href="#cv"><span class="nav__num" aria-hidden="true">05</span> cv</a>
       <span class="nav__lang"><a href="/" class="is-active" aria-current="page" hreflang="en">EN</a><a href="/it/" hreflang="it" lang="it">IT</a></span>
       <a href="mailto:riccardo.colletti@polimi.it" class="nav__cta">contact ↗</a>
     </nav>
@@ -169,7 +172,7 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
 
         <li class="sept__card sept__card--a reveal">
           <div class="sept__media">
-            <img loading="lazy" decoding="async" class="sept__img sept__img--paper" src="/assets/where/drift-happens-poster.png" alt="Drift Happens poster" />
+            <img loading="lazy" decoding="async" class="sept__img sept__img--paper" width="565" height="800" src="/assets/where/drift-happens-poster.png" alt="Drift Happens poster" />
           </div>
           <div class="sept__body">
             <span class="sept__when">07 → 11 sep · naples</span>
@@ -181,7 +184,7 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
 
         <li class="sept__card sept__card--b reveal">
           <div class="sept__media">
-            <img loading="lazy" decoding="async" class="sept__img" src="/assets/where/polimi-portrait.jpg" style="object-position: center 22%" alt="Riccardo at Politecnico di Milano" />
+            <img loading="lazy" decoding="async" class="sept__img" width="720" height="900" src="/assets/where/polimi-portrait.jpg" style="object-position: center 22%" alt="Riccardo at Politecnico di Milano" />
           </div>
           <div class="sept__body">
             <span class="sept__when">from 11 sep · milan</span>
@@ -194,8 +197,8 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
 
         <li class="sept__card sept__card--c reveal">
           <div class="sept__media">
-            <img loading="lazy" decoding="async" class="sept__img" src="/assets/where/running.jpg" style="object-position: center 32%" alt="Riccardo running" />
-            <img loading="lazy" decoding="async" class="sept__img sept__img--strip" src="/assets/where/polimirun-official.jpg" alt="PolimiRun Milano 26" />
+            <img loading="lazy" decoding="async" class="sept__img" width="933" height="1400" src="/assets/where/running.jpg" style="object-position: center 32%" alt="Riccardo running" />
+            <img loading="lazy" decoding="async" class="sept__img sept__img--strip" width="1200" height="461" src="/assets/where/polimirun-official.jpg" alt="PolimiRun Milano 26" />
           </div>
           <div class="sept__body">
             <span class="sept__when">27 sep · milan</span>
@@ -207,7 +210,7 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
 
         <li class="sept__card sept__card--d reveal">
           <div class="sept__media">
-            <img loading="lazy" decoding="async" class="sept__img" src="/assets/where/tennis-club-alba.jpg" style="object-position: 46% 62%" alt="Tennis Club Alba from above" />
+            <img loading="lazy" decoding="async" class="sept__img" width="1400" height="787" src="/assets/where/tennis-club-alba.jpg" style="object-position: 46% 62%" alt="Tennis Club Alba from above" />
           </div>
           <div class="sept__body">
             <span class="sept__when">weekends · alba</span>
@@ -524,7 +527,7 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
             <div class="card__viz">
               <div class="dstrip">
                 <div class="dstrip__win">
-                  <img loading="lazy" decoding="async" class="dstrip__track" src="/assets/projects/drift/yearbook_mean_portrait.png" alt="The mean yearbook portrait per decade, 1910s to 2010s." />
+                  <img loading="lazy" decoding="async" class="dstrip__track" width="1126" height="127" src="/assets/projects/drift/yearbook_mean_portrait.png" alt="The mean yearbook portrait per decade, 1910s to 2010s." />
                 </div>
               </div>
               <div class="card__viz-cap">
@@ -540,19 +543,19 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
                   <span class="sg-col" data-col="2">eval 2000</span>
 
                   <span class="sg-row sg-row--cnn">cnn_l</span>
-                  <div class="sg-cell" data-col="0"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_cnn_60.png" alt="CNN saliency, eval 1960: attribution concentrates on facial features." /></div>
-                  <div class="sg-cell" data-col="1"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_cnn_80.png" alt="CNN saliency, eval 1980." /></div>
-                  <div class="sg-cell" data-col="2"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_cnn_00.png" alt="CNN saliency, eval 2000." /></div>
+                  <div class="sg-cell" data-col="0"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_cnn_60.png" alt="CNN saliency, eval 1960: attribution concentrates on facial features." /></div>
+                  <div class="sg-cell" data-col="1"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_cnn_80.png" alt="CNN saliency, eval 1980." /></div>
+                  <div class="sg-cell" data-col="2"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_cnn_00.png" alt="CNN saliency, eval 2000." /></div>
 
                   <span class="sg-row sg-row--resnet">resnet_s</span>
-                  <div class="sg-cell" data-col="0"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_resnet_60.png" alt="ResNet saliency, eval 1960." /></div>
-                  <div class="sg-cell" data-col="1"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_resnet_80.png" alt="ResNet saliency, eval 1980." /></div>
-                  <div class="sg-cell" data-col="2"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_resnet_00.png" alt="ResNet saliency, eval 2000." /></div>
+                  <div class="sg-cell" data-col="0"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_resnet_60.png" alt="ResNet saliency, eval 1960." /></div>
+                  <div class="sg-cell" data-col="1"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_resnet_80.png" alt="ResNet saliency, eval 1980." /></div>
+                  <div class="sg-cell" data-col="2"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_resnet_00.png" alt="ResNet saliency, eval 2000." /></div>
 
                   <span class="sg-row sg-row--mlp">mlp_l</span>
-                  <div class="sg-cell" data-col="0"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_mlp_60.png" alt="MLP saliency, eval 1960: attribution spread over the whole image." /></div>
-                  <div class="sg-cell" data-col="1"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_mlp_80.png" alt="MLP saliency, eval 1980." /></div>
-                  <div class="sg-cell" data-col="2"><img loading="lazy" decoding="async" src="/assets/projects/drift/sal_mlp_00.png" alt="MLP saliency, eval 2000." /></div>
+                  <div class="sg-cell" data-col="0"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_mlp_60.png" alt="MLP saliency, eval 1960: attribution spread over the whole image." /></div>
+                  <div class="sg-cell" data-col="1"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_mlp_80.png" alt="MLP saliency, eval 1980." /></div>
+                  <div class="sg-cell" data-col="2"><img loading="lazy" decoding="async" width="320" height="326" src="/assets/projects/drift/sal_mlp_00.png" alt="MLP saliency, eval 2000." /></div>
                 </div>
                 <div class="card__viz-cap">
                   <span class="live"></span>
@@ -615,7 +618,7 @@ Marketing (dynamic pricing · recommender systems · online advertising)</span>
                 <span class="card__viz-read bop__state">t=0.0s</span>
               </div>
               <div class="bop-fig" data-src="/assets/projects/plate/ppo_benchmark_bar.png" data-name="ppo_benchmark_bar.png" role="button" tabindex="0" aria-label="Open the PID vs Residual PPO benchmark chart">
-                <img loading="lazy" decoding="async" src="/assets/projects/plate/ppo_benchmark_bar.png" alt="Bar charts comparing PID and Residual PPO across 10 domain conditions: ball drop rate and tracking error." />
+                <img loading="lazy" decoding="async" width="2380" height="1029" src="/assets/projects/plate/ppo_benchmark_bar.png" alt="Bar charts comparing PID and Residual PPO across 10 domain conditions: ball drop rate and tracking error." />
               </div>
               <div class="card__viz-cap">
                 <span class="live"></span>
