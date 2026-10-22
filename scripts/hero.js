@@ -1,10 +1,5 @@
 import * as THREE from "three";
 
-/* ----------------------------------------------------------------------------
-   Hero: 3D loss landscape with gradient descent walkers.
-   Mouse rotates camera. Walkers descend the surface following the gradient
-   of a sum of gaussians: a real (if cartoon) optimization landscape.
----------------------------------------------------------------------------- */
 
 const canvas = document.getElementById("hero-canvas");
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -20,7 +15,7 @@ let renderer;
 try {
   renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
 } catch {
-  canvas.remove(); // no WebGL: drop the background layer, page works without it
+  canvas.remove(); 
 }
 
 if (renderer) {
@@ -28,15 +23,13 @@ if (renderer) {
   renderer.setSize(window.innerWidth, window.innerHeight, false);
   renderer.setClearColor(0x000000, 0);
 
-  /* -------------------- loss landscape: f(x,z) = -Σ a_k * exp(-|x-μ_k|² / σ²) -------------------- */
 
-  // Gaussian basins (negative => valleys), one ridge (positive) to break symmetry.
   const BASINS = [
     { mx:  4.0, mz:  3.0, a: 1.8, s: 5.0 },
     { mx: -3.5, mz:  4.5, a: 2.3, s: 6.0 },
     { mx: -2.0, mz: -3.5, a: 2.0, s: 4.5 },
     { mx:  3.5, mz: -4.0, a: 1.4, s: 4.0 },
-    { mx:  0.0, mz:  0.0, a: -0.9, s: 3.5 }, // central ridge (positive)
+    { mx:  0.0, mz:  0.0, a: -0.9, s: 3.5 }, 
   ];
 
   function loss(x, z) {
@@ -78,7 +71,7 @@ if (renderer) {
       uAccent:  { value: new THREE.Color(0x6ee7ff) },
       uAccent2: { value: new THREE.Color(0x0080ff) },
     },
-    vertexShader: /* glsl */ `
+    vertexShader:  `
       varying vec3 vPos;
       varying vec3 vNormal;
       void main() {
@@ -87,24 +80,21 @@ if (renderer) {
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
     `,
-    fragmentShader: /* glsl */ `
+    fragmentShader:  `
       uniform vec3 uAccent;
       uniform vec3 uAccent2;
       varying vec3 vPos;
       varying vec3 vNormal;
       void main() {
-        // height-based color (low = valleys = accent2, high = peaks = dim)
         float h = clamp((vPos.y + 2.2) / 4.0, 0.0, 1.0);
         vec3 lo = uAccent2 * 0.9;
         vec3 hi = uAccent * 0.15;
         vec3 col = mix(lo, hi, h);
 
-        // contour rings (every 0.25 in y)
         float ring = abs(fract(vPos.y * 4.0) - 0.5);
         float contour = smoothstep(0.45, 0.5, ring);
         col = mix(col + uAccent * 0.4, col, contour);
 
-        // grid lines (every 1 unit on x/z)
         float gx = abs(fract(vPos.x) - 0.5);
         float gz = abs(fract(vPos.z) - 0.5);
         float grid = step(0.48, max(gx, gz));
@@ -121,14 +111,12 @@ if (renderer) {
   const surface = new THREE.Mesh(planeGeom, surfaceMat);
   scene.add(surface);
 
-  // wireframe overlay
   const wire = new THREE.LineSegments(
     new THREE.WireframeGeometry(planeGeom),
     new THREE.LineBasicMaterial({ color: 0x6ee7ff, transparent: true, opacity: 0.08 })
   );
   scene.add(wire);
 
-  /* -------------------- gradient-descent walkers -------------------- */
 
   const WALKERS = 7;
   const LR = 0.12;
@@ -156,18 +144,15 @@ if (renderer) {
       const [gx, gz] = gradient(this.x, this.z);
       this.x -= gx * LR;
       this.z -= gz * LR;
-      // gentle noise so they don't all converge identically
       this.x += (Math.random() - 0.5) * 0.02;
       this.z += (Math.random() - 0.5) * 0.02;
 
-      // re-spawn if it settles (low gradient)
       const gnorm = Math.hypot(gx, gz);
       if (gnorm < 0.04) this.respawn();
 
       const y = loss(this.x, this.z) + 0.18;
       this.dot.position.set(this.x, y, this.z);
 
-      // trail
       this.trail.push([this.x, y - 0.05, this.z]);
       if (this.trail.length > TRAIL_LEN) this.trail.shift();
       for (let i = 0; i < this.trail.length; i++) {
@@ -194,7 +179,6 @@ if (renderer) {
     walkers.push(new Walker(x, z, palette[i % palette.length]));
   }
 
-  /* -------------------- interaction: orbit on mouse + scroll -------------------- */
 
   const target = new THREE.Vector2(0, 0);
   const mouse  = new THREE.Vector2(0, 0);
@@ -212,7 +196,6 @@ if (renderer) {
     renderer.setSize(window.innerWidth, window.innerHeight, false);
   });
 
-  /* -------------------- loop -------------------- */
 
   const clock = new THREE.Clock();
 
@@ -221,7 +204,6 @@ if (renderer) {
 
     mouse.lerp(target, 0.05);
 
-    // slow auto-orbit + mouse offset, eased
     const azim = t * 0.06 + mouse.x * 0.6;
     const elev = 0.55 + mouse.y * 0.15;
     const r    = 16 - Math.min(scrollY / window.innerHeight, 1) * 4;
@@ -234,7 +216,6 @@ if (renderer) {
 
     for (const w of walkers) w.step();
 
-    // fade whole scene on scroll past hero
     const scrollNorm = Math.min(scrollY / window.innerHeight, 1);
     const opacity = 1 - scrollNorm * 0.85;
     surface.visible = opacity > 0.05;

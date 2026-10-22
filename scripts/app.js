@@ -1,4 +1,3 @@
-/* ---------- year ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 
 document.querySelectorAll(".nav__lang a").forEach((a) => {
@@ -16,7 +15,6 @@ navToggle?.addEventListener("click", () => setNav(!nav.classList.contains("is-op
 nav?.querySelectorAll(".nav__links a").forEach((a) => a.addEventListener("click", () => setNav(false)));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav?.classList.contains("is-open")) setNav(false); });
 
-/* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -28,7 +26,6 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-/* ---------- lightbox ---------- */
 const lightbox = document.getElementById("lightbox");
 const lbImg    = lightbox?.querySelector(".lightbox__img");
 const lbName   = document.getElementById("lb-name");
@@ -69,7 +66,6 @@ lightbox?.addEventListener("click", (e) => {
 });
 window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
 
-/* ---------- tilt on cards ---------- */
 const cards = document.querySelectorAll(".card:not(.has-viz)");
 cards.forEach((card) => {
   card.addEventListener("pointermove", (e) => {

@@ -1,12 +1,10 @@
-/* Card visuals and page dynamics. */
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- hero terminal: commands type themselves on load ---------- */
   const term = document.querySelector(".terminal__body code");
   if (term && !reduce) document.fonts.ready.then(() => {
     const pre = term.parentElement;
-    pre.style.minHeight = pre.offsetHeight + "px"; // no layout jump while typing
+    pre.style.minHeight = pre.offsetHeight + "px"; 
     const nodes = Array.from(term.childNodes);
     term.textContent = "";
     let i = 0;
@@ -31,7 +29,6 @@
     })();
   });
 
-  /* ---------- section titles: matrix-style decode on first reveal ---------- */
   if (!reduce && "IntersectionObserver" in window) {
     const GLYPHS = "!<>-_\\/[]{}=+*^?#$%&";
     document.querySelectorAll(".section__title").forEach((t) => {
@@ -59,17 +56,16 @@
     });
   }
 
-  /* ---------- drift filmstrip ---------- */
   document.querySelectorAll(".dstrip").forEach((strip) => {
     const win = strip.querySelector(".dstrip__win");
     const img = strip.querySelector(".dstrip__track");
     const label = strip.querySelector(".dstrip__decade");
     if (!win || !img) return;
 
-    const CELLS = 11;            // 11 decade portraits in the strip
-    const NATIVE_W = 1126;       // source strip width in px
+    const CELLS = 11;            
+    const NATIVE_W = 1126;       
     const decadeOf = (x) => {
-      const scale = img.clientHeight / 127;               // 127 = native strip height
+      const scale = img.clientHeight / 127;               
       const centerNative = (x + win.clientWidth / 2) / scale;
       let idx = Math.floor(centerNative / (NATIVE_W / CELLS));
       idx = Math.max(0, Math.min(CELLS - 1, idx));
@@ -77,7 +73,7 @@
     };
 
     let x = 0, dir = 1, paused = false, last = null;
-    const speed = 24; // px/s
+    const speed = 24; 
 
     function tick(t) {
       if (last === null) last = t;
@@ -105,7 +101,6 @@
     else img.addEventListener("load", boot);
   });
 
-  /* ---------- hydra: sharing-spectrum sweep (λ ping-pongs 0 ↔ 1) ---------- */
   document.querySelectorAll(".hydra").forEach((hy) => {
     const shared = hy.querySelector(".hy-shared");
     const indep = hy.querySelector(".hy-indep");
@@ -128,19 +123,18 @@
 
     apply(1);
     if (reduce) { apply(0.5); return; }
-    let last = null, phase = 0; // phase freezes while paused → resumes where it left off
+    let last = null, phase = 0; 
     (function tick(ts) {
       if (last === null) last = ts;
       const dt = ts - last; last = ts;
       if (!paused) {
-        phase += dt / 9000; // 9s round trip
+        phase += dt / 9000; 
         apply(0.5 + 0.5 * Math.cos(phase * 2 * Math.PI));
       }
       requestAnimationFrame(tick);
     })(performance.now());
   });
 
-  /* ---------- drift saliency grid: eval-year column sweep ---------- */
   document.querySelectorAll(".salviz").forEach((viz) => {
     const cells = viz.querySelectorAll(".sg-cell");
     const cols = viz.querySelectorAll(".sg-col");
@@ -156,7 +150,6 @@
       if (year) year.textContent = YEARS[i];
     }
 
-    // hover: pause the sweep and light the whole grid up for comparison
     viz.addEventListener("pointerenter", () => {
       paused = true;
       cells.forEach((c) => c.classList.add("is-on"));
@@ -175,7 +168,6 @@
     }, 1900);
   });
 
-  /* ---------- hold your plate: rollout video (plays only in view) ---------- */
   document.querySelectorAll(".bop").forEach((bop) => {
     const video = bop.querySelector(".bop__video");
     const state = bop.closest(".card__viz")?.querySelector(".bop__state");
@@ -185,7 +177,7 @@
         state.textContent = "t=" + video.currentTime.toFixed(1) + "s";
       });
     }
-    if (reduce) return; // poster only
+    if (reduce) return; 
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) video.play().catch(() => {});
@@ -195,7 +187,6 @@
     io.observe(bop);
   });
 
-  /* ---------- zoomable figures: reuse the global lightbox ---------- */
   document.querySelectorAll(".bop-fig, .cv-pic").forEach((fig) => {
     const open = () => window.openLightbox?.(fig.dataset.src, fig.dataset.name || "");
     fig.addEventListener("click", open);
@@ -204,7 +195,6 @@
     });
   });
 
-  /* ---------- klip w–Â plane marker ---------- */
   document.querySelectorAll(".kplane").forEach((plane) => {
     const marker = plane.querySelector(".kp-marker");
     const halo = plane.querySelector(".kp-marker-halo");
@@ -212,7 +202,6 @@
     if (!marker) return;
     plane.classList.add("is-live");
 
-    // region centres in the SVG's own viewBox coordinates (0 0 400 282)
     const P = {
       inb:    [215, 133],
       trkill: [327, 79],
@@ -220,7 +209,6 @@
       tlpass: [102, 79],
       brpass: [327, 186],
     };
-    // a tour that keeps returning to the band, then straying into a corner
     const tour = [
       { p: P.inb,    s: "in",   d: 1.1 },
       { p: P.trkill, s: "kill", d: 1.5 },
@@ -255,7 +243,7 @@
       const a = tour[seg], b = tour[(seg + 1) % tour.length];
       segT += dt / b.d;
       const k = Math.min(1, segT);
-      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; // easeInOut
+      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; 
       place(a.p[0] + (b.p[0] - a.p[0]) * e, a.p[1] + (b.p[1] - a.p[1]) * e);
       say(k > 0.55 ? b.s : a.s);
       if (segT >= 1) { seg = (seg + 1) % tour.length; segT = 0; }
