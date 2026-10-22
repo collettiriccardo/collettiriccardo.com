@@ -8,9 +8,9 @@
   --fg: #e6edf3;
   --fg-dim: #7d8895;
   --fg-mute: #4f5a66;
-  --accent: #6ee7ff;      
-  --accent-2: #ff5cae;    
-  --accent-3: #ffe066;    
+  --accent: #6ee7ff;
+  --accent-2: #ff5cae;
+  --accent-3: #ffe066;
   --green: #8fffb6;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
@@ -1010,7 +1010,7 @@ code { font-family: var(--mono); }
   filter: grayscale(0.18) contrast(1.06) brightness(1.02);
   will-change: transform;
 }
-.dstrip__win::after { 
+.dstrip__win::after {
   content: "";
   position: absolute; inset: 0;
   pointer-events: none;

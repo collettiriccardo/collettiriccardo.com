@@ -15,7 +15,7 @@ let renderer;
 try {
   renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
 } catch {
-  canvas.remove(); 
+  canvas.remove();
 }
 
 if (renderer) {
@@ -29,7 +29,7 @@ if (renderer) {
     { mx: -3.5, mz:  4.5, a: 2.3, s: 6.0 },
     { mx: -2.0, mz: -3.5, a: 2.0, s: 4.5 },
     { mx:  3.5, mz: -4.0, a: 1.4, s: 4.0 },
-    { mx:  0.0, mz:  0.0, a: -0.9, s: 3.5 }, 
+    { mx:  0.0, mz:  0.0, a: -0.9, s: 3.5 },
   ];
 
   function loss(x, z) {
@@ -71,7 +71,7 @@ if (renderer) {
       uAccent:  { value: new THREE.Color(0x6ee7ff) },
       uAccent2: { value: new THREE.Color(0x0080ff) },
     },
-    vertexShader:  `
+    vertexShader: `
       varying vec3 vPos;
       varying vec3 vNormal;
       void main() {
@@ -80,7 +80,7 @@ if (renderer) {
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
     `,
-    fragmentShader:  `
+    fragmentShader: `
       uniform vec3 uAccent;
       uniform vec3 uAccent2;
       varying vec3 vPos;

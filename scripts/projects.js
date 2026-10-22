@@ -4,7 +4,7 @@
   const term = document.querySelector(".terminal__body code");
   if (term && !reduce) document.fonts.ready.then(() => {
     const pre = term.parentElement;
-    pre.style.minHeight = pre.offsetHeight + "px"; 
+    pre.style.minHeight = pre.offsetHeight + "px";
     const nodes = Array.from(term.childNodes);
     term.textContent = "";
     let i = 0;
@@ -62,10 +62,10 @@
     const label = strip.querySelector(".dstrip__decade");
     if (!win || !img) return;
 
-    const CELLS = 11;            
-    const NATIVE_W = 1126;       
+    const CELLS = 11;
+    const NATIVE_W = 1126;
     const decadeOf = (x) => {
-      const scale = img.clientHeight / 127;               
+      const scale = img.clientHeight / 127;
       const centerNative = (x + win.clientWidth / 2) / scale;
       let idx = Math.floor(centerNative / (NATIVE_W / CELLS));
       idx = Math.max(0, Math.min(CELLS - 1, idx));
@@ -73,7 +73,7 @@
     };
 
     let x = 0, dir = 1, paused = false, last = null;
-    const speed = 24; 
+    const speed = 24;
 
     function tick(t) {
       if (last === null) last = t;
@@ -123,12 +123,12 @@
 
     apply(1);
     if (reduce) { apply(0.5); return; }
-    let last = null, phase = 0; 
+    let last = null, phase = 0;
     (function tick(ts) {
       if (last === null) last = ts;
       const dt = ts - last; last = ts;
       if (!paused) {
-        phase += dt / 9000; 
+        phase += dt / 9000;
         apply(0.5 + 0.5 * Math.cos(phase * 2 * Math.PI));
       }
       requestAnimationFrame(tick);
@@ -177,7 +177,7 @@
         state.textContent = "t=" + video.currentTime.toFixed(1) + "s";
       });
     }
-    if (reduce) return; 
+    if (reduce) return;
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) video.play().catch(() => {});
@@ -243,7 +243,7 @@
       const a = tour[seg], b = tour[(seg + 1) % tour.length];
       segT += dt / b.d;
       const k = Math.min(1, segT);
-      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; 
+      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
       place(a.p[0] + (b.p[0] - a.p[0]) * e, a.p[1] + (b.p[1] - a.p[1]) * e);
       say(k > 0.55 ? b.s : a.s);
       if (segT >= 1) { seg = (seg + 1) % tour.length; segT = 0; }
